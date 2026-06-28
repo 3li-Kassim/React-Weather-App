@@ -1,12 +1,13 @@
 import { useState, useEffect, Suspense } from "react";
 
+
 function App() {
   const [inputValue, setInputValue] = useState("");
   const [weatherInfo, setWeatherInfo] = useState(null);
   const [fiveWeatherInfo, setFiveWeatherInfo] = useState(null);
   const [isFetching, setIsFetching] = useState(false);
 
-  const apiKey = "5c0dfb6ae182590784c0228880691505";
+  const apiKey = import.meta.env.VITE_API_KEY;
   const date = new Date();
 
   useEffect(() => {
